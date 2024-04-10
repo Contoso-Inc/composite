@@ -1,0 +1,44 @@
+name: Entity Inputs (Multi)
+
+on:
+  workflow_dispatch:
+    inputs:
+      _entity_repository_0_metadata_name:
+        description: Respository repository
+        type: string
+        required: true
+      _entity_repository_1_metadata_name:
+        description: Respository repository
+        type: string
+        required: true
+      _entity_environment_0_spec_ResourceGroup:
+        description: Environment Resource Group
+        type: string
+        required: false
+      _entity_environment_0_spec_Subscription:
+        description: Environment Subscription
+        type: string
+        required: false
+      _entity_environment_1_spec_ResourceGroup:
+        description: Environment Resource Group
+        type: string
+        required: false
+      _entity_environment_1_spec_Subscription:
+        description: Environment Subscription
+        type: string
+        required: false
+
+env:
+  description: This workflow is used to test entity inputs that resolve to entity references.
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "### Repository 0 Name ${{ inputs._entity_repository_0_metadata_name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Repository 1 Name ${{ inputs._entity_repository_1_metadata_name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 0 Resource Group ${{ inputs._entity_environment_0_spec_ResourceGroup }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 0 Subscription ${{ inputs._entity_environment_0_spec_Subscription }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 1 Resource Group ${{ inputs._entity_environment_1_spec_ResourceGroup }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 1 Subscription ${{ inputs._entity_environment_1_spec_Subscription }}! :rocket:" >> $GITHUB_STEP_SUMMARY
