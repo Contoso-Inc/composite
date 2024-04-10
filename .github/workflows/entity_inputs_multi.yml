@@ -4,27 +4,27 @@ on:
   workflow_dispatch:
     inputs:
       _entity_repository_0_metadata_name:
-        description: Respository repository
+        description: Respository 0 name
         type: string
         required: true
       _entity_repository_1_metadata_name:
-        description: Respository repository
+        description: Respository 1 name
         type: string
         required: true
       _entity_environment_0_spec_ResourceGroup:
-        description: Environment Resource Group
+        description: Environment 0 Resource Group
         type: string
         required: false
       _entity_environment_0_spec_Subscription:
-        description: Environment Subscription
+        description: Environment 0 Subscription
         type: string
         required: false
       _entity_environment_1_spec_ResourceGroup:
-        description: Environment Resource Group
+        description: Environment 1 Resource Group
         type: string
         required: false
       _entity_environment_1_spec_Subscription:
-        description: Environment Subscription
+        description: Environment 1 Subscription
         type: string
         required: false
 
