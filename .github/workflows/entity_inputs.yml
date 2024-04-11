@@ -41,9 +41,9 @@ jobs:
           echo "### Inputs" >> $GITHUB_STEP_SUMMARY
           echo "| input | value |" >> $GITHUB_STEP_SUMMARY
           echo "| ----- | ----- |" >> $GITHUB_STEP_SUMMARY
-          echo "| `regular_number` | ${{ inputs.regular_number }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| `regular_boolean` | ${{ inputs.regular_boolean }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| `regular_string` | ${{ inputs.regular_string }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| `_entity_repository_metadata_name` | ${{ inputs._entity_repository_metadata_name }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| `_entity_environment_spec_ResourceGroup` | ${{ inputs._entity_environment_spec_ResourceGroup }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| `_entity_environment_spec_Subscription` | ${{ inputs._entity_environment_spec_Subscription }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| regular_number | ${{ inputs.regular_number }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| regular_boolean | ${{ inputs.regular_boolean }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| regular_string | ${{ inputs.regular_string }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_repository_metadata_name | ${{ inputs._entity_repository_metadata_name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_spec_ResourceGroup | ${{ inputs._entity_environment_spec_ResourceGroup }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_spec_Subscription | ${{ inputs._entity_environment_spec_Subscription }} |" >> $GITHUB_STEP_SUMMARY
