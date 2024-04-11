@@ -3,6 +3,19 @@ name: Entity Inputs
 on:
   workflow_dispatch:
     inputs:
+      regular_number:
+        description: Regular Number
+        type: number
+        required: true
+      regular_boolean:
+        description: Regular Boolean
+        type: boolean
+        required: true
+      regular_string:
+        description: Regular String
+        type: string
+        required: true
+        default: hello
       _entity_repository_metadata_name:
         description: Respository Name
         type: string
@@ -24,6 +37,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo "### Regular Number ${{ inputs.regular_number }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Regular Boolean ${{ inputs.regular_boolean }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Regular String ${{ inputs.regular_string }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Repository Name ${{ inputs._entity_repository_metadata_name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Environment Resource Group ${{ inputs._entity_environment_spec_ResourceGroup }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Environment Subscription ${{ inputs._entity_environment_spec_Subscription }}! :rocket:" >> $GITHUB_STEP_SUMMARY
