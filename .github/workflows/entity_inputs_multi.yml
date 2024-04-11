@@ -52,19 +52,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "### Inputs" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| input | value |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| ----- | ----- |" >> $GITHUB_STEP_SUMMARY
-
-      - run: echo "| _entity_repository_0_metadata_Name | ${{ inputs._entity_repository_0_metadata_Name }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_repository_1_metadata_Name | ${{ inputs._entity_repository_1_metadata_Name }} |" >> $GITHUB_STEP_SUMMARY
-
-      - run: echo "| _entity_environment_0_spec_Type | ${{ inputs._entity_environment_0_spec_Type }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_environment_0_spec_ResourceGroup | ${{ inputs._entity_environment_0_spec_ResourceGroup }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_environment_0_spec_Subscription | ${{ inputs._entity_environment_0_spec_Subscription }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_environment_0_spec_ResourceId | ${{ inputs._entity_environment_0_spec_ResourceId }} |" >> $GITHUB_STEP_SUMMARY
-
-      - run: echo "| _entity_environment_1_spec_Type | ${{ inputs._entity_environment_1_spec_Type }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_environment_1_spec_ResourceGroup | ${{ inputs._entity_environment_1_spec_ResourceGroup }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_environment_1_spec_Subscription | ${{ inputs._entity_environment_1_spec_Subscription }} |" >> $GITHUB_STEP_SUMMARY
-      - run: echo "| _entity_environment_1_spec_ResourceId | ${{ inputs._entity_environment_1_spec_ResourceId }} |" >> $GITHUB_STEP_SUMMARY
+      - run: |
+          echo "### Inputs" >> $GITHUB_STEP_SUMMARY
+          echo "| input | value |" >> $GITHUB_STEP_SUMMARY
+          echo "| ----- | ----- |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_repository_0_metadata_Name | ${{ inputs._entity_repository_0_metadata_Name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_repository_1_metadata_Name | ${{ inputs._entity_repository_1_metadata_Name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_0_spec_Type | ${{ inputs._entity_environment_0_spec_Type }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_0_spec_ResourceGroup | ${{ inputs._entity_environment_0_spec_ResourceGroup }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_0_spec_Subscription | ${{ inputs._entity_environment_0_spec_Subscription }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_0_spec_ResourceId | ${{ inputs._entity_environment_0_spec_ResourceId }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_1_spec_Type | ${{ inputs._entity_environment_1_spec_Type }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_1_spec_ResourceGroup | ${{ inputs._entity_environment_1_spec_ResourceGroup }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_1_spec_Subscription | ${{ inputs._entity_environment_1_spec_Subscription }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| _entity_environment_1_spec_ResourceId | ${{ inputs._entity_environment_1_spec_ResourceId }} |" >> $GITHUB_STEP_SUMMARY
