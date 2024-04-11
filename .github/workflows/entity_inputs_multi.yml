@@ -3,14 +3,18 @@ name: Entity Inputs (Multi)
 on:
   workflow_dispatch:
     inputs:
-      _entity_repository_0_metadata_name:
+      _entity_repository_0_metadata_Name:
         description: Respository 0 name
         type: string
         required: true
-      _entity_repository_1_metadata_name:
+      _entity_repository_1_metadata_Name:
         description: Respository 1 name
         type: string
         required: true
+      _entity_environment_0_spec_Type:
+        description: Environment 0 Type
+        type: string
+        required: false
       _entity_environment_0_spec_ResourceGroup:
         description: Environment 0 Resource Group
         type: string
@@ -19,12 +23,24 @@ on:
         description: Environment 0 Subscription
         type: string
         required: false
+      _entity_environment_0_spec_ResourceId:
+        description: Environment 0 ResourceId
+        type: string
+        required: false
+      _entity_environment_1_spec_Type:
+        description: Environment 1 Type
+        type: string
+        required: false
       _entity_environment_1_spec_ResourceGroup:
         description: Environment 1 Resource Group
         type: string
         required: false
       _entity_environment_1_spec_Subscription:
         description: Environment 1 Subscription
+        type: string
+        required: false
+      _entity_environment_1_spec_ResourceId:
+        description: Environment 1 ResourceId
         type: string
         required: false
 
@@ -36,9 +52,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "### Repository 0 Name ${{ inputs._entity_repository_0_metadata_name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
-      - run: echo "### Repository 1 Name ${{ inputs._entity_repository_1_metadata_name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Repository 0 Name ${{ inputs._entity_repository_0_metadata_Name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "----" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Repository 1 Name ${{ inputs._entity_repository_1_metadata_Name }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "----" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 0 Resource Typ ${{ inputs._entity_environment_0_spec_Type }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Environment 0 Resource Group ${{ inputs._entity_environment_0_spec_ResourceGroup }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Environment 0 Subscription ${{ inputs._entity_environment_0_spec_Subscription }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 0 ResourceId ${{ inputs._entity_environment_0_spec_ResourceId }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "----" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 1 Resource Typ ${{ inputs._entity_environment_1_spec_Type }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Environment 1 Resource Group ${{ inputs._entity_environment_1_spec_ResourceGroup }}! :rocket:" >> $GITHUB_STEP_SUMMARY
       - run: echo "### Environment 1 Subscription ${{ inputs._entity_environment_1_spec_Subscription }}! :rocket:" >> $GITHUB_STEP_SUMMARY
+      - run: echo "### Environment 1 ResourceId ${{ inputs._entity_environment_1_spec_ResourceId }}! :rocket:" >> $GITHUB_STEP_SUMMARY
