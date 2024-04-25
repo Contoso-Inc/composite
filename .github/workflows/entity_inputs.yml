@@ -1,4 +1,4 @@
-name: Entity Inputs
+name: Test Entity Inputs
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ on:
         required: false
 
 env:
-  description: This workflow is used to test entity inputs that resolve to entity references.
+  description: This workflow is used to test different inputs, including two that should resolve to entity references.
 
 jobs:
   log:
