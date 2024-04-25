@@ -1,4 +1,4 @@
-name: Entity Inputs (Multi)
+name: Test Multiple Entity Inputs
 
 on:
   workflow_dispatch:
@@ -45,7 +45,7 @@ on:
         required: false
 
 env:
-  description: This workflow is used to test entity inputs that resolve to entity references.
+  description: This workflow is used to test multiple entity inputs that should resolve to entity references to verify that more than one of the same "kind" works as expected.
 
 jobs:
   log:
