@@ -1,4 +1,4 @@
-name: Test Different Input Types
+name: Different Input Types
 
 on:
   workflow_dispatch:
