@@ -30,7 +30,7 @@ on:
         required: false
 
 env:
-  description: This workflow is used to test different inputs, including two that should resolve to entity references.
+  description: This workflow is used to test different input types.
 
 jobs:
   log:
